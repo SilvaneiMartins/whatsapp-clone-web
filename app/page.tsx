@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
     return (
@@ -6,6 +7,10 @@ export default function Home() {
             <Button>
                 <span className="text-lg">WhatsApp Clone</span>
             </Button>
+
+            <div className="mt-5">
+                <UserButton afterSignOutUrl="/" />
+            </div>
         </div>
     );
 }
